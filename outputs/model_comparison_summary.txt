@@ -1,0 +1,24 @@
+Model Comparison Summary
+========================
+
+Objective:
+Compare multiple logistic regression specifications for predicting household receipt of government benefits using ENIGH 2022 microdata.
+
+Models compared:
+- Minimal model: Uses five core conceptual predictors: income per capita, household size, elderly presence, locality size and socioeconomic stratum.
+- Base model: Includes demographic, household composition, income, spending, territorial and socioeconomic variables.
+- Economic-composition model: Adds labor income share to the base model to test whether household income composition improves classification performance.
+
+Main comparison metrics:
+- Minimal model: ROC AUC = 0.8536, Accuracy = 0.8107, Precision = 0.7974, Recall = 0.6268, F1 = 0.7019, Conceptual predictors = 5, Predictors after dummies = 9, BIC = 59674.21
+- Base model: ROC AUC = 0.8619, Accuracy = 0.8135, Precision = 0.7972, Recall = 0.6379, F1 = 0.7087, Conceptual predictors = 10, Predictors after dummies = 14, BIC = 59499.49
+- Economic-composition model: ROC AUC = 0.8666, Accuracy = 0.8155, Precision = 0.7935, Recall = 0.6505, F1 = 0.7149, Conceptual predictors = 11, Predictors after dummies = 15, BIC = 58461.17
+
+Best model by ROC AUC:
+- Economic-composition model (ROC AUC = 0.8666)
+
+Best model by BIC:
+- Economic-composition model (BIC = 58461.17)
+
+Interpretation note:
+The preferred model should not be selected only by predictive performance. For applied social analysis, interpretability and methodological coherence are also important. A simpler model may be preferable if it performs similarly to a more complex specification.

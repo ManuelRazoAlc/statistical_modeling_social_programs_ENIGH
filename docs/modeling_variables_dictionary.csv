@@ -1,0 +1,25 @@
+﻿variable,description,type,notes
+dwelling_id,Dwelling identifier from ENIGH.,Text,Original variable: folioviv
+household_id,Household identifier within dwelling.,Text,Original variable: foliohog
+geo_code,Geographic code. First two digits identify the state.,Text,Original variable: ubica_geo
+entity_code,Two-digit state code derived from geo_code.,Text,Derived variable
+locality_size_label,Locality size category.,Categorical,Derived label from tam_loc
+socioeconomic_stratum_label,Socioeconomic stratum category.,Categorical,Derived label from est_socio
+expansion_factor,Survey expansion factor.,Numeric,Original variable: factor
+design_stratum,Survey design stratum.,Text,Original variable: est_dis
+primary_sampling_unit,Primary sampling unit.,Text,Original variable: upm
+head_sex_label,Sex of the household head.,Categorical,Derived label from sexo_jefe
+head_age,Age of the household head.,Numeric,Original variable: edad_jefe
+head_education,Education level code of the household head.,Text,Original variable: educa_jefe
+household_members,Total number of household members.,Numeric,Original variable: tot_integ
+members_65_plus,Number of household members aged 65 or older.,Numeric,Original variable: p65mas
+has_elderly_member,Indicator for households with at least one member aged 65 or older.,Binary,Derived variable
+has_minor_member,Indicator for households with at least one minor member.,Binary,Derived variable
+current_income,Current quarterly household income.,Numeric,Original variable: ing_cor
+income_per_capita,Current income divided by household members.,Numeric,Derived variable
+labor_income,Quarterly household labor income.,Numeric,Original variable: ingtrab
+labor_income_share,Labor income as a share of current income.,Numeric,Derived variable
+government_benefits_income,Quarterly income from government benefits.,Numeric,Original variable: bene_gob
+government_benefits_share,Government benefits as a share of current income.,Numeric,Derived variable
+food_spending_share,Food spending as a share of monetary spending.,Numeric,Derived variable
+received_government_benefits,"Target variable: 1 if government_benefits_income > 0, otherwise 0.",Binary,Derived target

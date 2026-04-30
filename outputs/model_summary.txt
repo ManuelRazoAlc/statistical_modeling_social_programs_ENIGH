@@ -1,0 +1,75 @@
+Logistic Regression Model Summary
+=================================
+
+Objective:
+Estimate factors associated with the probability that a household receives government benefits using ENIGH 2022 household-level microdata.
+
+Target variable:
+- received_government_benefits: 1 if government_benefits_income > 0; 0 otherwise.
+
+Modeling sample:
+- Rows used after dropping missing values: 90033
+- Training rows: 67524
+- Test rows: 22509
+
+Performance metrics:
+- accuracy: 0.813496823492825
+- precision: 0.7972213549797065
+- recall: 0.6378965775668248
+- f1_score: 0.708714959755759
+- roc_auc: 0.8618847954635966
+- true_negatives: 13204.0
+- false_positives: 1299.0
+- false_negatives: 2899.0
+- true_positives: 5107.0
+- modeling_rows: 90033.0
+- train_rows: 67524.0
+- test_rows: 22509.0
+
+Interpretation guide:
+- Odds ratios above 1 are associated with higher odds of receiving government benefits, holding the other variables constant.
+- Odds ratios below 1 are associated with lower odds of receiving government benefits, holding the other variables constant.
+- This model estimates statistical associations, not causal effects.
+
+Top variables by odds ratio:
+- has_elderly_member: odds ratio = 21.059, p-value = 0
+- socioeconomic_stratum_label_Low: odds ratio = 2.578, p-value = 1.647e-54
+- locality_size_label_2,500 to 14,999 inhabitants: odds ratio = 1.618, p-value = 5.36e-37
+- locality_size_label_Less than 2,500 inhabitants: odds ratio = 1.527, p-value = 2.642e-36
+- household_members: odds ratio = 1.417, p-value = 1.017e-270
+- locality_size_label_15,000 to 99,999 inhabitants: odds ratio = 1.371, p-value = 6.51e-18
+- socioeconomic_stratum_label_Lower-middle: odds ratio = 1.145, p-value = 0.01068
+- head_age: odds ratio = 1.012, p-value = 2.264e-30
+- socioeconomic_stratum_label_Upper-middle: odds ratio = 1.006, p-value = 0.918
+- head_sex_label_Male: odds ratio = 0.886, p-value = 1.339e-07
+
+Full statsmodels summary:
+
+                                Logit Regression Results                                
+========================================================================================
+Dep. Variable:     received_government_benefits   No. Observations:                67524
+Model:                                    Logit   Df Residuals:                    67509
+Method:                                     MLE   Df Model:                           14
+Date:                          Thu, 30 Apr 2026   Pseudo R-squ.:                  0.3250
+Time:                                  00:32:55   Log-Likelihood:                -29666.
+converged:                                 True   LL-Null:                       -43950.
+Covariance Type:                      nonrobust   LLR p-value:                     0.000
+====================================================================================================================
+                                                       coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+const                                                0.0603      0.204      0.296      0.767      -0.339       0.460
+log_income_per_capita                               -0.3515      0.017    -20.332      0.000      -0.385      -0.318
+head_age                                             0.0116      0.001     11.453      0.000       0.010       0.014
+household_members                                    0.3486      0.010     35.154      0.000       0.329       0.368
+has_elderly_member                                   3.0473      0.035     86.963      0.000       2.979       3.116
+has_minor_member                                    -0.3727      0.030    -12.378      0.000      -0.432      -0.314
+employed_members                                    -0.1629      0.013    -12.960      0.000      -0.188      -0.138
+food_spending_share                                 -0.1224      0.067     -1.835      0.066      -0.253       0.008
+locality_size_label_15,000 to 99,999 inhabitants     0.3156      0.037      8.623      0.000       0.244       0.387
+locality_size_label_2,500 to 14,999 inhabitants      0.4811      0.038     12.708      0.000       0.407       0.555
+locality_size_label_Less than 2,500 inhabitants      0.4232      0.034     12.582      0.000       0.357       0.489
+socioeconomic_stratum_label_Low                      0.9471      0.061     15.548      0.000       0.828       1.066
+socioeconomic_stratum_label_Lower-middle             0.1356      0.053      2.553      0.011       0.032       0.240
+socioeconomic_stratum_label_Upper-middle             0.0055      0.054      0.103      0.918      -0.100       0.111
+head_sex_label_Male                                 -0.1206      0.023     -5.273      0.000      -0.165      -0.076
+====================================================================================================================

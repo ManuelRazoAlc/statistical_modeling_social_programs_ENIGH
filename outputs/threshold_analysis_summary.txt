@@ -1,0 +1,36 @@
+Threshold Analysis Summary
+==========================
+
+Objective:
+Evaluate how different classification thresholds affect precision, recall, F1 score, false positives and false negatives for the selected base logistic regression model.
+
+Default threshold 0.50:
+- Accuracy: 0.8135
+- Precision: 0.7972
+- Recall: 0.6379
+- F1 score: 0.7087
+- False positives: 1299
+- False negatives: 2899
+- False positive rate: 0.0896
+- False negative rate: 0.3621
+
+Best threshold by F1 score:
+- Threshold: 0.35
+- Accuracy: 0.8057
+- Precision: 0.7267
+- Recall: 0.7271
+- F1 score: 0.7269
+- False positives: 2189
+- False negatives: 2185
+
+Best threshold by accuracy:
+- Threshold: 0.50
+- Accuracy: 0.8135
+- Precision: 0.7972
+- Recall: 0.6379
+- F1 score: 0.7087
+- False positives: 1299
+- False negatives: 2899
+
+Interpretation note:
+Lower thresholds classify more households as benefit recipients, which tends to increase recall and reduce false negatives, but also increases false positives. Higher thresholds classify fewer households as recipients, which tends to increase precision but may exclude more true recipient households.

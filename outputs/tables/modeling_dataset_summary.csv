@@ -1,0 +1,10 @@
+﻿metric,value
+raw_rows,90102.0
+modeling_rows,90102.0
+modeling_columns,52.0
+households_with_government_benefits,32039.0
+households_without_government_benefits,58063.0
+share_with_government_benefits_unweighted,0.35558589154513776
+mean_current_income,61489.962000399544
+median_current_income,46073.685
+mean_government_benefits_income_among_recipients,5200.397804862823
